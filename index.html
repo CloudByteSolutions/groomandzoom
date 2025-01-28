@@ -48,12 +48,7 @@
                 <h2 class="major">Work with us</h2>
 				<!-- <span class="image main"><img src="images/pic.jpg" alt="" /></span> -->
                 <p>Are you interested in joining our team? Fill out the application below!</p>
-                <form
-                    id="applicationForm"
-                    action="https://formspree.io/f/xdkaerwz"
-                    method="POST"
-                    enctype="multipart/form-data"
-                >
+                <form id="applicationForm" >
                     <div class="fields">
                         <div class="field half">
                             <label for="applicantName">Full Name</label>
@@ -122,7 +117,7 @@
     <!-- Scripts -->
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script>
-        document.getElementById("websiteForm").addEventListener("submit", async function (e) {
+        document.getElementById("applicationForm").addEventListener("submit", async function (e) {
           e.preventDefault();
       
           const name = document.getElementById("name").value;
