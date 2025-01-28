@@ -44,52 +44,40 @@
             </article>
 
             <!-- Apply -->
-			<article id="apply">
-				<h2 class="major">Work with us</h2>
+            <article id="apply">
+                <h2 class="major">Work with us</h2>
 				<!-- <span class="image main"><img src="images/pic.jpg" alt="" /></span> -->
-				<p>Are you interested in joining our team? Fill out the application below!</p>
-				<form
-				id="applicationForm"
-				action="https://formspree.io/f/xdkearwz"
-				method="POST"
-				enctype="multipart/form-data"
-			>
-				<div class="fields">
-					<div class="field half">
-						<label for="applicantName">Full Name</label>
-						<input type="text" id="applicantName" name="name" required />
-					</div>
-					<div class="field half">
-						<label for="applicantEmail">Email Address</label>
-						<input type="email" id="applicantEmail" name="email" required />
-					</div>
-					<div class="field">
-						<label for="applicantPhone">Phone Number</label>
-						<input type="tel" id="applicantPhone" name="phone" pattern="^(\(\d{3}\)\s?|\d{3}[-.\s]?)\d{3}[-.\s]?\d{4}$" title="Please enter a valid phone number (e.g., 123-456-7890 or (123) 456-7890)" required />
-					</div>
-					<div class="field">
-						<label for="applicantResume">Upload Resume</label>
-						<input type="file" id="applicantResume" name="upload" accept=".pdf,.doc,.docx" required />
-					</div>
-				</div>
-				<ul class="actions special">
-					<li><input type="submit" value="Submit Application" class="primary" /></li>
-				</ul>
-			</form>
-			
-			<!-- Confirmation Message -->
-			<div id="confirmationMessage" style="display: none; text-align: center; margin-top: 20px; font-size: 18px; color: green;">
-				Thank you for applying! We’ll review your application and get back to you soon.
-			</div>
-				
-				<!-- Confirmation Message -->
-				<div id="confirmationMessage" style="display: none; text-align: center; margin-top: 20px; font-size: 18px; color: green;">
-					Thank you for applying! We’ll review your application and get back to you soon.
-				</div>
-				
+                <p>Are you interested in joining our team? Fill out the application below!</p>
+                <form
+                    id="applicationForm"
+                    action="https://formspree.io/f/xdkearwz"
+                    method="POST"
+                    enctype="multipart/form-data"
+                >
+                    <div class="fields">
+                        <div class="field half">
+                            <label for="applicantName">Full Name</label>
+                            <input type="text" id="applicantName" name="name" required />
+                        </div>
+                        <div class="field half">
+                            <label for="applicantEmail">Email Address</label>
+                            <input type="email" id="applicantEmail" name="email" required />
+                        </div>
+                        <div class="field">
+                            <label for="applicantPhone">Phone Number</label>
+                            <input type="tel" id="applicantPhone" name="phone" pattern="^(\(\d{3}\)\s?|\d{3}[-.\s]?)\d{3}[-.\s]?\d{4}$" title="Please enter a valid phone number (e.g., 123-456-7890 or (123) 456-7890)" required />
+                        </div>
+                        <div class="field">
+                            <label for="applicantResume">Upload Resume</label>
+                            <input type="file" id="applicantResume" name="upload" accept=".pdf,.doc,.docx" required />
+                        </div>
+                    </div>
+                    <ul class="actions special">
+                        <li><input type="submit" value="Submit Application" class="primary" /></li>
+                    </ul>
+                </form>
+            </article>
 
-			</article>
-			
             <!-- About -->
             <article id="about">
                 <h2 class="major">About</h2>
@@ -132,7 +120,7 @@
     <div id="bg"></div>
 
     <!-- Scripts -->
-	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 	<script>
 		function validateForm(event) {
 			const email = document.getElementById("applicantEmail").value;
@@ -160,34 +148,6 @@
 		// Attach the validation function to the form submit event
 		document.getElementById("applicationForm").addEventListener("submit", validateForm);
 	</script>
-<script>
-    document.getElementById("applicationForm").addEventListener("submit", async function (event) {
-        event.preventDefault(); // Prevent the default form submission
-
-        const form = event.target;
-        const formData = new FormData(form);
-
-        try {
-            const response = await fetch(form.action, {
-                method: "POST",
-                body: formData,
-                headers: {
-                    Accept: "application/json",
-                },
-            });
-
-            if (response.ok) {
-                // Hide the form and show the confirmation message
-                form.style.display = "none";
-                document.getElementById("confirmationMessage").style.display = "block";
-            } else {
-                alert("There was an error submitting your application. Please try again.");
-            }
-        } catch (error) {
-            alert("An unexpected error occurred. Please try again later.");
-        }
-    });
-</script>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/browser.min.js"></script>
     <script src="assets/js/breakpoints.min.js"></script>
