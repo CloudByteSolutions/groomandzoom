@@ -99,17 +99,24 @@ input, select, textarea {
 		}
 
 		.logo {
-			width: 14vw;  /* Slightly reduce size */
-			height: 14vw;
-			max-width: 65px;  /* Ensure it doesn’t get too big */
-			max-height: 65px;
+			width: 50px !important;  /* Override any existing size */
+			height: 50px !important; /* Force a smaller size */
+			max-width: 50px;
+			max-height: 50px;
 		}
 	
 		.logo img {
-			width: 80%; /* Adjust scaling */
-			height: 80%;
+			width: 100% !important;
+			height: 100% !important;
+			object-fit: contain;
 		}
-
+	
+		/* If it's inside #header, override there too */
+		#header .logo {
+			width: 50px !important;
+			height: 50px !important;
+			line-height: 50px !important;
+		}
 	}
 
 	html {
