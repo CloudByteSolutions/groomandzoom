@@ -71,19 +71,20 @@ input, select, textarea {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100px;
-    height: 100px;
+    width: 15vw;  /* Make it scale dynamically */
+    height: 15vw;
+    max-width: 100px;  /* Prevent it from becoming too large */
+    max-height: 100px;
     border-radius: 50%;
     overflow: hidden;
     background-color: transparent;
 }
 
 .logo img {
-    width: 100%;
-    height: 100%;
+    width: 80%;
+    height: 80%;
     object-fit: contain;
 }
-
 
 /* Basic */
 
@@ -98,14 +99,15 @@ input, select, textarea {
 		}
 
 		.logo {
-			width: 120px;  /* Adjust size for mobile */
-			height: 120px;
+			width: 20vw;  /* Slightly larger on smaller screens */
+			height: 20vw;
+			max-width: 80px;
+			max-height: 80px;
 		}
 	
 		.logo img {
-			width: 100%;
-			height: 100%;
-			object-fit: contain;
+			width: 85%;
+			height: 85%;
 		}
 
 	}
