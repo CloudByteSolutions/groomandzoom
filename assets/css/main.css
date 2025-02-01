@@ -1435,11 +1435,11 @@ input, select, textarea {
 				height: calc(2rem + 1px);
 			}
 		
-			/* Adjust the logo size for mobile */
+			/* Increase the logo size further for iOS/small screens */
 			#header .logo {
-				width: 8rem;  /* Increased from 4.75rem */
-				height: 8rem; /* Increased from 4.75rem */
-				line-height: 8rem;
+				width: 12rem;  /* Increased size */
+				height: 12rem; /* Increased size */
+				line-height: 12rem;
 			}
 		
 			#header .logo img {
@@ -1448,15 +1448,16 @@ input, select, textarea {
 				object-fit: contain;
 			}
 		
+			/* Adjust content padding to balance with larger logo */
 			#header .content .inner {
-				padding: 2.5rem 1rem;
+				padding: 3rem 1.5rem;
 			}
 		
 			#header .content p {
-				line-height: 1.875;
+				line-height: 2;
 			}
 		}
-
+		
 		@media screen and (max-width: 480px) {
 
 			#header {
