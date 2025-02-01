@@ -67,25 +67,6 @@ input, select, textarea {
 	appearance: none;
 }
 
-.logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 15vw;  /* Make it scale dynamically */
-    height: 15vw;
-    max-width: 100px;  /* Prevent it from becoming too large */
-    max-height: 100px;
-    border-radius: 50%;
-    overflow: hidden;
-    background-color: transparent;
-}
-
-.logo img {
-    width: 80%;
-    height: 80%;
-    object-fit: contain;
-}
-
 /* Basic */
 
 	@-ms-viewport {
@@ -99,16 +80,15 @@ input, select, textarea {
 		}
 
 		.logo {
-			width: 100px !important;  /* Increased size */
-			height: 100px !important;
-			max-width: 100px;
-			max-height: 100px;
+			width: 150px !important;  /* Increased from 100px */
+			height: 150px !important;
+			max-width: 150px;
+			max-height: 150px;
 		}
 	
 		.logo img {
-			width: 90% !important;  /* Ensure it scales well inside the circle */
+			width: 90% !important;
 			height: 90% !important;
-			object-fit: contain;
 		}
 
 	}
@@ -1469,11 +1449,11 @@ input, select, textarea {
 		
 			/* Increase the logo size further for iOS/small screens */
 			#header .logo {
-				width: 12rem;  /* Increased size */
-				height: 12rem; /* Increased size */
-				line-height: 12rem;
+				width: 14rem !important;  /* Previously 12rem */
+				height: 14rem !important;
+				line-height: 14rem !important;
 			}
-		
+					
 			#header .logo img {
 				max-width: 100%; /* Ensure the SVG scales within the container */
 				max-height: 100%;
