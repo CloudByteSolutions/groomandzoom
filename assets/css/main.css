@@ -99,15 +99,16 @@ input, select, textarea {
 		}
 
 		.logo {
-			width: 20vw;  /* Slightly larger on smaller screens */
-			height: 20vw;
-			max-width: 80px;
-			max-height: 80px;
+			width: 100px !important;  /* Increased size */
+			height: 100px !important;
+			max-width: 100px;
+			max-height: 100px;
 		}
 	
 		.logo img {
-			width: 85%;
-			height: 85%;
+			width: 90% !important;  /* Ensure it scales well inside the circle */
+			height: 90% !important;
+			object-fit: contain;
 		}
 
 	}
