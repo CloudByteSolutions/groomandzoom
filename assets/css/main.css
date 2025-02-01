@@ -72,22 +72,30 @@ input, select, textarea {
     justify-content: center;
     align-items: center;
     margin: 0 auto; /* Center horizontally */
-    width: 12rem; /* Adjust width */
-    height: 12rem; /* Adjust height */
+    width: 12rem; /* Adjusted size for better desktop scaling */
+    height: 12rem; 
     border-radius: 50%;
     overflow: hidden;
     position: relative;
     z-index: 2; /* Ensure it is above other elements */
-    background-color: transparent; /* Optional background color */
+    background-color: transparent;
 }
 
 .logo img {
     max-width: 100%;
     max-height: 100%;
-    object-fit: contain; /* Ensures the logo scales properly */
+    object-fit: contain; /* Ensures proper scaling without distortion */
 }
 
-/* Adjustments for smaller screens */
+/* Adjustments for medium screens (tablets) */
+@media screen and (max-width: 1024px) {
+    .logo {
+        width: 12rem;
+        height: 12rem;
+    }
+}
+
+/* Adjustments for smaller screens (mobile) */
 @media screen and (max-width: 736px) {
     .logo {
         width: 10rem;
@@ -101,7 +109,6 @@ input, select, textarea {
         height: 8rem;
     }
 }
-
 /* Basic */
 
 	@-ms-viewport {
