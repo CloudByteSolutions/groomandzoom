@@ -3,20 +3,25 @@
 <head>
     <title>Groom and Zoom</title>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="preload" href="assets/css/main.css" as="style" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#00040F" />
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+    <link rel="icon" href="images/favicon.ico" />
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
 </head>
 <body class="is-preload">
-
     <!-- Wrapper -->
     <div id="wrapper">
-
         <!-- Header -->
         <header id="header">
             <div class="logo" style="display: flex; justify-content: center; align-items: center; width: 100px; height: 100px; border-radius: 50%; overflow: hidden; background-color: transparent;">
                 <img src="images/logo_white_outline.svg" style="max-width: 90%; max-height: 90%; object-fit: contain;" />
-            </div>                                                                    
+            </div> 
             <div class="content">
                 <div class="inner">
                     <h1>Groom and Zoom</h1>
@@ -35,48 +40,56 @@
 
         <!-- Main -->
         <div id="main">
-
             <!-- Intro -->
             <article id="intro">
                 <h2 class="major">Intro</h2>
-                <span class="image main"><img src="images/intro.jpg" alt="" /></span>
-                <p>Welcome to Groom and Zoom, Chicago's premier mobile dog grooming service! We bring top-notch grooming right to your doorstep, making it easier than ever to keep your furry friend looking and feeling their best. With our state-of-the-art grooming van and professional care, your pup will be pampered without ever leaving home. Sit, stay, we’re on the way!</p>
+                <span class="image main"><img src="images/intro.webp" alt="" loading="lazy" /></span>
+                <p>Welcome to Groom and Zoom, Chicago's premier mobile dog grooming service!</p>
             </article>
 
             <!-- Apply -->
             <article id="apply">
-                <h2 class="major">Work with us</h2>
-				<!-- <span class="image main"><img src="images/pic.jpg" alt="" /></span> -->
-                <p>Are you interested in joining our team? Fill out the application below!</p>
-                <form id="applicationForm" >
-                    <div class="fields">
-                        <div class="field half">
-                            <label for="applicantName">Full Name</label>
-                            <input type="text" id="applicantName" name="name" required />
-                        </div>
-                        <div class="field half">
-                            <label for="applicantEmail">Email</label>
-                            <input type="email" id="applicantEmail" name="email" required />
-                        </div>
-                        <div class="field">
-                            <label for="applicantPhone">Phone Number</label>
-                            <input type="tel" id="applicantPhone" name="phone" pattern="^(\(\d{3}\)\s?|\d{3}[-.\s]?)\d{3}[-.\s]?\d{4}$" title="Please enter a valid phone number (e.g., 123-456-7890 or (123) 456-7890)" required />
-                        </div>
-                        <div class="field">
-                            <label for="applicantResume">Upload Resume</label>
-                            <input type="file" id="applicantResume" name="upload" accept=".pdf,.doc,.docx" required />
-                        </div>
-                    </div>
-                    <ul class="actions special">
-                        <li><input type="submit" value="Submit Application" class="primary" /></li>
-                    </ul>
-                </form>
+                <h2 class="major">Work with Us</h2>
+                <p>At <strong>Groom and Zoom</strong>, we’re revolutionizing pet care by bringing top-notch grooming services directly to our clients’ doors. Based in the heart of Chicago, we pride ourselves on providing a stress-free, convenient, and luxurious grooming experience for pets and their owners. Our state-of-the-art mobile grooming vans and passionate team make us the go-to choice for pet parents across the city.</p>
+                <p>We’re looking for dedicated, skilled, and compassionate <strong>Mobile Dog Groomers</strong> to join our growing team. If you love working with animals and are passionate about making pets look and feel their best, we’d love to hear from you!</p>
+
+                <h3>Responsibilities</h3>
+                <ul>
+                    <li>Perform grooming services including bathing, brushing, trimming, and styling for dogs of all breeds and sizes.</li>
+                    <li>Operate and maintain a clean, safe, and organized mobile grooming van.</li>
+                    <li>Provide exceptional customer service, ensuring a positive experience for both pets and their owners.</li>
+                    <li>Follow grooming instructions and preferences from pet owners.</li>
+                    <li>Maintain accurate records of services provided and client information.</li>
+                    <li>Adhere to all safety and sanitation protocols.</li>
+                </ul>
+
+                <h3>Requirements</h3>
+                <ul>
+                    <li>Proven experience as a professional dog groomer (certification is a plus).</li>
+                    <li>Knowledge of different dog breeds, coat types, and grooming techniques.</li>
+                    <li>Ability to handle dogs of all sizes and temperaments with patience and care.</li>
+                    <li>Strong communication and customer service skills.</li>
+                    <li>Reliable transportation to and from the grooming van’s base location.</li>
+                    <li>Flexibility to work weekdays, weekends, and occasional evenings.</li>
+                    <li>Must be physically able to lift and handle dogs up to 50 lbs.</li>
+                </ul>
+
+                <h3>Why Join Us?</h3>
+                <ul>
+                    <li>Competitive pay and tips.</li>
+                    <li>Flexible scheduling.</li>
+                    <li>Work independently in a state-of-the-art mobile grooming van.</li>
+                    <li>Be part of a supportive and passionate team.</li>
+                    <li>Make a difference in the lives of pets and their owners every day!</li>
+                </ul>
+
+                <a href="https://forms.gle/YourGoogleFormLink" target="_blank" class="button primary">Apply Now</a>
             </article>
 
             <!-- About -->
             <article id="about">
                 <h2 class="major">About</h2>
-                <span class="image main"><img src="images/about.jpg" alt="" /></span>
+                <span class="image main"><img src="images/about.webp" alt="" loading="lazy" /></span>
                 <p>Dr. Hamza Ajeena is a dedicated veterinarian with a passion for animal health and welfare.</p>
             </article>
 
@@ -115,64 +128,10 @@
     <div id="bg"></div>
 
     <!-- Scripts -->
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-    <script>
-        document.getElementById("applicationForm").addEventListener("submit", async function (e) {
-            e.preventDefault(); // Prevent default form submission
-    
-            // Get form values
-            const name = document.getElementById("applicantName").value;
-            const email = document.getElementById("applicantEmail").value;
-            const phone = document.getElementById("applicantPhone").value;
-            const resume = document.getElementById("applicantResume").files[0];
-    
-            if (!resume) {
-                alert("Please upload a resume before submitting.");
-                return;
-            }
-    
-            const reader = new FileReader();
-            reader.onload = async function () {
-                const fileData = reader.result.split(",")[1]; // Get Base64 file content
-                const payload = {
-                    name,
-                    email,
-                    phone,
-                    fileName: resume.name,
-                    fileData,
-                };
-    
-                try {
-                    const response = await fetch(
-                        "https://script.google.com/macros/s/AKfycbyOuuplAraZ8w8nl8zax9DD5KQPE4CLttsA2TriD9dAPsuyGp2dAFiepfBB7X6oW9wh/exec",
-                        {
-                            method: "POST",
-                            headers: {
-                                "Content-Type": "application/json",
-                            },
-                            body: JSON.stringify(payload),
-                        }
-                    );
-    
-                    const result = await response.json();
-                    if (result.success) {
-                        alert("Form submitted successfully!");
-                    } else {
-                        alert("There was an error. Please try again.");
-                    }
-                } catch (error) {
-                    alert("Error submitting the form. Please try again later.");
-                    console.error(error);
-                }
-            };
-            reader.readAsDataURL(resume); // Read file as Base64
-        });
-    </script>
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
-
+    <script src="assets/js/jquery.min.js" defer></script>
+    <script src="assets/js/browser.min.js" defer></script>
+    <script src="assets/js/breakpoints.min.js" defer></script>
+    <script src="assets/js/util.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
 </body>
 </html>
