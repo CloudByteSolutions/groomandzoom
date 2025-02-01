@@ -66,27 +66,32 @@ input, select, textarea {
 	-ms-appearance: none;
 	appearance: none;
 }
-
+/* Logo Container */
 .logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto; /* Center horizontally */
-    width: 15rem;  /* Larger size for desktop */
-    height: 15rem; /* Larger size for desktop */
-    border-radius: 50%;
-    overflow: hidden;
-    position: relative;
-    z-index: 2; /* Ensure it is above other elements */
-    background-color: transparent; /* Optional background color */
-}
-
-.logo img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain; /* Ensures the logo scales properly */
-}
-
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 auto;
+	width: 12rem; /* Adjust for the circle size */
+	height: 12rem;
+	border-radius: 50%; /* Circular shape */
+	position: relative;
+	z-index: 2; /* Ensure it is above other elements */
+	background-color: transparent; /* Optional background color */
+	overflow: hidden; /* Ensure the image doesn't exceed the container */
+  }
+  
+  /* Logo Image */
+  .logo img {
+	display: block;
+	width: 90%; /* Increase this for a slightly larger logo */
+	height: auto; /* Maintain aspect ratio */
+	position: absolute;
+	top: 50%; /* Center vertically */
+	left: 50%; /* Center horizontally */
+	transform: translate(-50%, -50%); /* Perfect centering */
+  }
+  
 /* Adjustments for medium screens (tablets) */
 @media screen and (max-width: 1024px) {
     .logo {
