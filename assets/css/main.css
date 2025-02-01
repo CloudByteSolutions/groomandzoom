@@ -1429,30 +1429,32 @@ input, select, textarea {
 			#header > * {
 				margin-top: 2rem;
 			}
-
-				#header > *:before {
-					top: calc(-2rem - 1px);
-					height: calc(2rem + 1px);
-				}
-
-			#header .logo {
-				width: 4.75rem;
-				height: 4.75rem;
-				line-height: 4.75rem;
+		
+			#header > *:before {
+				top: calc(-2rem - 1px);
+				height: calc(2rem + 1px);
 			}
-
-				#header .logo .icon:before {
-					font-size: 1.75rem;
-				}
-
+		
+			/* Adjust the logo size for mobile */
+			#header .logo {
+				width: 8rem;  /* Increased from 4.75rem */
+				height: 8rem; /* Increased from 4.75rem */
+				line-height: 8rem;
+			}
+		
+			#header .logo img {
+				max-width: 100%; /* Ensure the SVG scales within the container */
+				max-height: 100%;
+				object-fit: contain;
+			}
+		
 			#header .content .inner {
 				padding: 2.5rem 1rem;
 			}
-
+		
 			#header .content p {
 				line-height: 1.875;
 			}
-
 		}
 
 		@media screen and (max-width: 480px) {
