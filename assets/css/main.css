@@ -91,27 +91,27 @@ input, select, textarea {
 	left: 50%; /* Center horizontally */
 	transform: translate(-50%, -50%); /* Perfect centering */
   }
-  
+
 /* Adjustments for medium screens (tablets) */
 @media screen and (max-width: 1024px) {
     .logo {
-        width: 12rem;
-        height: 12rem;
+        width: 11rem;
+        height: 11rem;
     }
 }
 
 /* Adjustments for smaller screens (mobile) */
 @media screen and (max-width: 736px) {
     .logo {
-        width: 10rem;
-        height: 10rem;
+        width: 9rem;
+        height: 9rem;
     }
 }
 
 @media screen and (max-width: 480px) {
     .logo {
-        width: 8rem;
-        height: 8rem;
+        width: 7rem;
+        height: 7rem;
     }
 }
 /* Basic */
