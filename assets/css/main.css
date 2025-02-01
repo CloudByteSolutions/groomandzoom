@@ -67,6 +67,41 @@ input, select, textarea {
 	appearance: none;
 }
 
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto; /* Center horizontally */
+    width: 12rem; /* Adjust width */
+    height: 12rem; /* Adjust height */
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    z-index: 2; /* Ensure it is above other elements */
+    background-color: transparent; /* Optional background color */
+}
+
+.logo img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Ensures the logo scales properly */
+}
+
+/* Adjustments for smaller screens */
+@media screen and (max-width: 736px) {
+    .logo {
+        width: 10rem;
+        height: 10rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .logo {
+        width: 8rem;
+        height: 8rem;
+    }
+}
+
 /* Basic */
 
 	@-ms-viewport {
