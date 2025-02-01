@@ -71,18 +71,18 @@ input, select, textarea {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 12vw;  /* Makes it responsive */
-    height: 12vw;
-    max-width: 90px;  /* Prevents it from getting too large on big screens */
-    max-height: 90px;
+    width: 15vw;  /* Make it scale dynamically */
+    height: 15vw;
+    max-width: 100px;  /* Prevent it from becoming too large */
+    max-height: 100px;
     border-radius: 50%;
     overflow: hidden;
     background-color: transparent;
 }
 
 .logo img {
-    width: 75%;  /* Ensures the image fits well inside the circle */
-    height: 75%;
+    width: 80%;
+    height: 80%;
     object-fit: contain;
 }
 
@@ -99,24 +99,17 @@ input, select, textarea {
 		}
 
 		.logo {
-			width: 50px !important;  /* Override any existing size */
-			height: 50px !important; /* Force a smaller size */
-			max-width: 50px;
-			max-height: 50px;
+			width: 20vw;  /* Slightly larger on smaller screens */
+			height: 20vw;
+			max-width: 80px;
+			max-height: 80px;
 		}
 	
 		.logo img {
-			width: 100% !important;
-			height: 100% !important;
-			object-fit: contain;
+			width: 85%;
+			height: 85%;
 		}
-	
-		/* If it's inside #header, override there too */
-		#header .logo {
-			width: 50px !important;
-			height: 50px !important;
-			line-height: 50px !important;
-		}
+
 	}
 
 	html {
