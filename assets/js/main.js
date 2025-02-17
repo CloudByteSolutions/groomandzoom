@@ -445,4 +445,70 @@
 		});
 	}
 
+	// Modified initialization code
+	$(function() {
+		const taglineContainer = document.querySelector('.tagline');
+		if (!taglineContainer) return;
+		
+		taglineContainer.innerHTML = '';
+		
+		// Create containers for each phrase
+		const phrases = ['Sit.', 'Stay.'];
+		const lastPhrase = ["We're", "on", "the", "way!"];
+		
+		// Add first two phrases
+		const spans = phrases.map(phrase => {
+			const span = document.createElement('span');
+			span.className = 'fade-text';
+			span.textContent = phrase;
+			taglineContainer.appendChild(span);
+			return span;
+		});
+
+		// Add last phrase words individually
+		const lastPhraseSpans = lastPhrase.map(word => {
+			const span = document.createElement('span');
+			span.className = 'fade-text last-phrase';
+			span.textContent = word;
+			taglineContainer.appendChild(span);
+			return span;
+		});
+
+		// Animate each element
+		function startAnimations() {
+			// First two phrases
+			spans.forEach((span, i) => {
+				setTimeout(() => {
+					span.classList.add('visible');
+				}, i * 700); // Slightly faster timing
+			});
+
+			// Last phrase words
+			lastPhraseSpans.forEach((span, i) => {
+				setTimeout(() => {
+					span.classList.add('visible');
+				}, (spans.length * 700) + (i * 300)); // Even faster timing for words
+			});
+
+			// Fade in location text
+			const locationText = document.querySelector('.location');
+			if (locationText) {
+				setTimeout(() => {
+					locationText.classList.add('visible');
+				}, (spans.length * 700) + (lastPhraseSpans.length * 300) + 200);
+			}
+
+			// Fade in Book Now button last
+			const bookButton = document.querySelector('.button.primary');
+			if (bookButton) {
+				setTimeout(() => {
+					bookButton.classList.add('visible');
+				}, (spans.length * 700) + (lastPhraseSpans.length * 300) + 600);
+			}
+		}
+
+		// Start animations after a short delay
+		setTimeout(startAnimations, 500);
+	});
+
 })(jQuery);
