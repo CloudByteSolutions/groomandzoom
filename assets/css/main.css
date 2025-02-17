@@ -41,12 +41,38 @@ body {
 	#wrapper {
 		min-height: 100%;
 		overflow-y: auto;
+		-webkit-overflow-scrolling: touch;
+	}
+
+	#main {
+		position: relative;
+		height: auto;
+		min-height: 100%;
 	}
 
 	#main article {
-		max-height: 85vh;
+		max-height: none;
 		overflow-y: auto;
 		-webkit-overflow-scrolling: touch;
+		position: relative;
+		margin: 2rem 0;
+		transform: none !important;
+		transition: opacity 0.325s ease-in-out !important;
+	}
+
+	#main article.active {
+		transform: none !important;
+	}
+
+	#bg {
+		position: fixed;
+		height: 100%;
+		transform: none !important;
+	}
+
+	#bg:after {
+		transform: none !important;
+		transition: filter 0.325s ease-in-out;
 	}
 }
 
