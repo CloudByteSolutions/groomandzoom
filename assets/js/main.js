@@ -112,6 +112,13 @@
 									$article.scrollTop(0);
 								}, (initial ? 1000 : 0));
 
+							// Add this for mobile
+							if (browser.mobile) {
+								setTimeout(function() {
+									window.scrollTo(0, 1);
+								}, 100);
+							}
+
 							return;
 
 						}
@@ -430,9 +437,11 @@
 		
 		// Handle orientation changes
 		window.addEventListener('orientationchange', function() {
-			setTimeout(function() {
-				window.scrollTo(0, 1);
-			}, 100);
+			if ($body.hasClass('is-article-visible')) {
+				setTimeout(function() {
+					window.scrollTo(0, 1);
+				}, 100);
+			}
 		});
 	}
 

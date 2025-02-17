@@ -1672,31 +1672,13 @@ input, select, textarea {
 			-webkit-transition: opacity 0.325s ease-in-out, -webkit-transform 0.325s ease-in-out;
 			-ms-transition: opacity 0.325s ease-in-out, -ms-transform 0.325s ease-in-out;
 			transition: opacity 0.325s ease-in-out, transform 0.325s ease-in-out;
-			padding: 4.5rem 2.5rem 1.5rem 2.5rem ;
+			padding: 4.5rem 2.5rem 1.5rem 2.5rem;
 			position: relative;
 			width: 40rem;
 			max-width: 100%;
 			background-color: rgba(27, 31, 34, 0.85);
 			border-radius: 4px;
 			opacity: 0;
-			overflow-y: auto;
-			max-height: 85vh;
-			margin: 2rem 0;
-			-webkit-overflow-scrolling: touch;
-			
-			/* Customize scrollbar */
-			&::-webkit-scrollbar {
-				width: 0.5rem;
-			}
-			
-			&::-webkit-scrollbar-track {
-				background: rgba(255, 255, 255, 0.1);
-			}
-			
-			&::-webkit-scrollbar-thumb {
-				background: rgba(255, 255, 255, 0.3);
-				border-radius: 0.25rem;
-			}
 		}
 
 			#main article.active {
@@ -1751,7 +1733,7 @@ input, select, textarea {
 		@media screen and (max-width: 736px) {
 
 			#main article {
-				padding: 3.5rem 2rem 0.5rem 2rem ;
+				padding: 3.5rem 2rem 0.5rem 2rem;
 			}
 
 				#main article .close:before {
@@ -1767,7 +1749,7 @@ input, select, textarea {
 		@media screen and (max-width: 480px) {
 
 			#main article {
-				padding: 3rem 1.5rem 0.5rem 1.5rem ;
+				padding: 3rem 1.5rem 0.5rem 1.5rem;
 			}
 
 		}
@@ -1822,4 +1804,38 @@ input, select, textarea {
 	letter-spacing: 0.2rem;
 	font-size: 0.8rem;
   }
+  
+/* Mobile-specific adjustments */
+@media screen and (max-width: 736px) {
+    /* When article is visible */
+    body.is-article-visible {
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        height: auto;
+    }
+
+    body.is-article-visible #wrapper {
+        min-height: auto;
+        height: auto;
+        overflow: visible;
+    }
+
+    body.is-article-visible #main article {
+        height: auto;
+        max-height: none;
+        overflow: visible;
+        margin: 2rem auto;
+    }
+
+    /* When no article is visible */
+    body:not(.is-article-visible) {
+        overflow: hidden;
+        height: 100vh;
+    }
+
+    body:not(.is-article-visible) #wrapper {
+        min-height: 100vh;
+        overflow: hidden;
+    }
+}
   
