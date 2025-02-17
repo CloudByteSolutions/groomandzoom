@@ -407,4 +407,33 @@
 				}
 			});
 
+	// Add this near the top of your main.js initialization
+	window.addEventListener('load', function() {
+		// Attempt to minimize URL bar on mobile
+		setTimeout(function() {
+			window.scrollTo(0, 1);
+		}, 0);
+
+		// Handle article scrolling
+		$window.on('wheel', function(event) {
+			if ($body.hasClass('is-article-visible')) {
+				event.preventDefault();
+				return false;
+			}
+		});
+	});
+
+	// Add this to your existing mobile detection/handling
+	if (browser.mobile) {
+		// Enable smooth scrolling on iOS
+		document.documentElement.style.setProperty('--webkit-overflow-scrolling', 'touch');
+		
+		// Handle orientation changes
+		window.addEventListener('orientationchange', function() {
+			setTimeout(function() {
+				window.scrollTo(0, 1);
+			}, 100);
+		});
+	}
+
 })(jQuery);
