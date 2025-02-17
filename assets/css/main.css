@@ -1631,7 +1631,7 @@ input, select, textarea {
 			opacity: 0;
 			overflow-y: auto;
 			max-height: 85vh;
-			margin: 0;
+			margin: 2rem 0;
 			-webkit-overflow-scrolling: touch;
 			
 			/* Customize scrollbar */
@@ -1733,8 +1733,8 @@ input, select, textarea {
 		max-width: 100%;
 		margin-top: 2rem;
 		text-align: center;
-		position: absolute;
-		bottom: 2rem;
+		position: relative;
+		bottom: auto;
 	}
 
 		#footer .copyright {
