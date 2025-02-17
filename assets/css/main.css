@@ -26,6 +26,8 @@ footer, header, hgroup, menu, nav, section {
 
 body {
 	line-height: 1;
+	overflow: hidden;
+	height: 100vh;
 }
 
 ol, ul {
@@ -1591,10 +1593,10 @@ input, select, textarea {
 	}
 
 		#main article {
-			-moz-transform: translateY(0.25rem);
-			-webkit-transform: translateY(0.25rem);
-			-ms-transform: translateY(0.25rem);
-			transform: translateY(0.25rem);
+			-moz-transform: translateY(1rem);
+			-webkit-transform: translateY(1rem);
+			-ms-transform: translateY(1rem);
+			transform: translateY(1rem);
 			-moz-transition: opacity 0.325s ease-in-out, -moz-transform 0.325s ease-in-out;
 			-webkit-transition: opacity 0.325s ease-in-out, -webkit-transform 0.325s ease-in-out;
 			-ms-transition: opacity 0.325s ease-in-out, -ms-transform 0.325s ease-in-out;
@@ -1606,6 +1608,24 @@ input, select, textarea {
 			background-color: rgba(27, 31, 34, 0.85);
 			border-radius: 4px;
 			opacity: 0;
+			overflow-y: auto;
+			max-height: 90vh;
+			margin: 0;
+			-webkit-overflow-scrolling: touch;
+			
+			/* Customize scrollbar */
+			&::-webkit-scrollbar {
+				width: 0.5rem;
+			}
+			
+			&::-webkit-scrollbar-track {
+				background: rgba(255, 255, 255, 0.1);
+			}
+			
+			&::-webkit-scrollbar-thumb {
+				background: rgba(255, 255, 255, 0.3);
+				border-radius: 0.25rem;
+			}
 		}
 
 			#main article.active {
@@ -1614,6 +1634,7 @@ input, select, textarea {
 				-ms-transform: translateY(0);
 				transform: translateY(0);
 				opacity: 1;
+				transition: transform 0.325s ease-in-out, opacity 0.325s ease-in-out;
 			}
 
 			#main article .close {

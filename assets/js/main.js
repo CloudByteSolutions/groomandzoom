@@ -100,9 +100,16 @@
 							// Unlock.
 								locked = false;
 
+							// Prevent scroll restoration.
+								if ('scrollRestoration' in history) {
+									history.scrollRestoration = 'manual';
+								}
+
 							// Unmark as switching.
 								setTimeout(function() {
 									$body.removeClass('is-switching');
+									// Reset article scroll position
+									$article.scrollTop(0);
 								}, (initial ? 1000 : 0));
 
 							return;
@@ -391,5 +398,13 @@
 					$window.on('load', function() {
 						$main._show(location.hash.substr(1), true);
 					});
+
+		// Prevent default scroll behavior when article is visible
+			$window.on('wheel', function(event) {
+				if ($body.hasClass('is-article-visible')) {
+					event.preventDefault();
+					return false;
+				}
+			});
 
 })(jQuery);
