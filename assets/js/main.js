@@ -488,7 +488,7 @@
 			lastPhraseSpans.forEach((span, i) => {
 				setTimeout(() => {
 					span.classList.add('visible');
-				}, baseDelay + (i * (i === lastPhraseSpans.length - 1 ? 200 : 500)));  // 200ms for WAY!, 500ms for others
+				}, baseDelay + (i * 300));  // Fixed sequential timing, 300ms between each word
 			});
 
 			// Fade in location text
@@ -496,7 +496,7 @@
 			if (locationText) {
 				setTimeout(() => {
 					locationText.classList.add('visible');
-				}, baseDelay + (lastPhraseSpans.length * 500) + 600);
+				}, baseDelay + (lastPhraseSpans.length * 300) + 600);
 			}
 
 			// Fade in Book Now button last
@@ -504,7 +504,7 @@
 			if (bookButton) {
 				setTimeout(() => {
 					bookButton.classList.add('visible');
-				}, baseDelay + (lastPhraseSpans.length * 500) + 1200);
+				}, baseDelay + (lastPhraseSpans.length * 300) + 1200);
 			}
 		}
 
