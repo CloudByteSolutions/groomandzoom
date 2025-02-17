@@ -480,14 +480,15 @@
 			spans.forEach((span, i) => {
 				setTimeout(() => {
 					span.classList.add('visible');
-				}, i * 700); // Slightly faster timing
+				}, i * 700);
 			});
 
-			// Last phrase words
+			// Last phrase words with bouncy timing
+			const baseDelay = spans.length * 700;
 			lastPhraseSpans.forEach((span, i) => {
 				setTimeout(() => {
 					span.classList.add('visible');
-				}, (spans.length * 700) + (i * 300)); // Even faster timing for words
+				}, baseDelay + (i * 500));
 			});
 
 			// Fade in location text
@@ -495,7 +496,7 @@
 			if (locationText) {
 				setTimeout(() => {
 					locationText.classList.add('visible');
-				}, (spans.length * 700) + (lastPhraseSpans.length * 300) + 200);
+				}, baseDelay + (lastPhraseSpans.length * 500) + 600);
 			}
 
 			// Fade in Book Now button last
@@ -503,7 +504,7 @@
 			if (bookButton) {
 				setTimeout(() => {
 					bookButton.classList.add('visible');
-				}, (spans.length * 700) + (lastPhraseSpans.length * 300) + 600);
+				}, baseDelay + (lastPhraseSpans.length * 500) + 1200);
 			}
 		}
 

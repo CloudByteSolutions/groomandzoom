@@ -86,6 +86,30 @@ body {
 		position: relative;
 		margin-top: 2rem;
 	}
+
+	#header .content .inner .button.primary {
+		min-width: 9rem;
+		height: 3.25rem;
+		line-height: 3.25rem;
+		font-size: 0.9rem;
+		padding: 0 1.5rem;
+		margin-top: 1.5rem;
+	}
+
+	.button.primary.visible {
+		transform: scale(1.05);
+	}
+
+	.button.primary:hover {
+		transform: scale(1.1);
+	}
+}
+
+@media screen and (max-width: 480px) {
+	#header .content .inner .button.primary {
+		min-width: 10rem;
+		margin: 1.5rem auto 1rem;
+	}
 }
 
 /* iOS-specific fixes */
@@ -1794,15 +1818,15 @@ input, select, textarea {
 
 /* Make the Book Now button match the nav item dimensions */
 #header .content .inner .button.primary {
-	min-width: 7.5rem;
-	/* Ensure the height, line-height, and padding match the nav links */
-	height: 2.75rem;
-	line-height: 2.75rem;
-	padding: 0 1.25rem 0 1.45rem;
-	text-transform: uppercase;
-	letter-spacing: 0.2rem;
-	font-size: 0.8rem;
-  }
+    margin-top: 1rem;
+    min-width: 7.5rem;
+    height: 2.75rem;
+    line-height: 2.75rem;
+    padding: 0 1.25rem 0 1.45rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    font-size: 0.8rem;
+}
   
 /* Mobile-specific adjustments */
 @media screen and (max-width: 736px) {
@@ -1892,7 +1916,7 @@ input, select, textarea {
 }
 
 #header .content .inner .button.primary {
-    margin-top: 1.5rem;
+    margin-top: 1rem;
     min-width: 7.5rem;
     height: 2.75rem;
     line-height: 2.75rem;
@@ -2030,12 +2054,25 @@ input, select, textarea {
 }
 
 .fade-text.last-phrase {
-    transition: opacity 0.4s ease-out, transform 0.4s ease-out;
-    transform: scale(0.8);
+    opacity: 0;
+    transform: scale(0.7) translateY(30px);
+    transition: opacity 0.5s ease-out, transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    color: #fff;
 }
 
 .fade-text.last-phrase.visible {
-    transform: scale(1);
+    opacity: 1;
+    transform: scale(1) translateY(0);
+}
+
+/* Special styling for "way!" to emphasize the ending */
+.fade-text.last-phrase:last-child {
+    transform: scale(0.7) translateY(40px);
+    transition: opacity 0.6s ease-out, transform 0.6s cubic-bezier(0.17, 0.67, 0.83, 0.91);
+}
+
+.fade-text.last-phrase:last-child.visible {
+    transform: scale(1.1) translateY(0);
 }
 
 .fade-text.visible {
@@ -2047,7 +2084,7 @@ input, select, textarea {
     opacity: 0;
     transform: scale(0.95);
     transition: opacity 0.6s ease-out, transform 0.6s cubic-bezier(0.17, 0.67, 0.3, 1.33);
-    margin: 0.7em 0;
+    margin: 0.5em 0;
     font-size: 0.9rem;
     letter-spacing: 0.15rem;
 }
