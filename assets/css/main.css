@@ -42,12 +42,19 @@ body {
 		min-height: 100%;
 		overflow-y: auto;
 		-webkit-overflow-scrolling: touch;
+		padding: 1rem 1rem; /* Reduce padding */
+		justify-content: flex-start; /* Align content from top instead of space-between */
+	}
+
+	#header {
+		margin-top: 2rem; /* Add some space at the top */
 	}
 
 	#main {
 		position: relative;
 		height: auto;
 		min-height: 100%;
+		margin-top: 2rem; /* Add space between header and main content */
 	}
 
 	#main article {
@@ -1325,7 +1332,8 @@ input, select, textarea {
 		@media screen and (max-width: 736px) {
 
 			#wrapper {
-				padding: 2rem 1rem;
+				padding: 1rem 1rem; /* Reduce padding */
+				justify-content: flex-start; /* Align content from top instead of space-between */
 			}
 
 		}
