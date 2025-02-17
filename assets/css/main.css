@@ -1232,14 +1232,6 @@ input, select, textarea {
 			font-weight: 600;
 		}
 
-		.button.blur {
-			backdrop-filter: blur(4px);
-			-webkit-backdrop-filter: blur(4px);
-			background: rgba(255, 255, 255, 0.1);
-			border: 1px solid rgba(255, 255, 255, 0.2);
-			font-style: italic;
-		}
-
 		input[type="submit"].disabled, input[type="submit"]:disabled,
 		input[type="reset"].disabled,
 		input[type="reset"]:disabled,
