@@ -39,8 +39,9 @@ body {
 	}
 
 	#wrapper {
-		min-height: 100%;
-		overflow-y: auto;
+		min-height: 100vh;
+		padding: 2.5rem 1rem;
+		justify-content: center; /* Center content vertically */
 	}
 
 	#main article {
@@ -1299,7 +1300,7 @@ input, select, textarea {
 		@media screen and (max-width: 736px) {
 
 			#wrapper {
-				padding: 2rem 1rem;
+				padding: 2.5rem 1rem;
 			}
 
 		}
@@ -1307,7 +1308,7 @@ input, select, textarea {
 		@media screen and (max-width: 480px) {
 
 			#wrapper {
-				padding: 1rem;
+				padding: 1.5rem 1rem;
 			}
 
 		}
@@ -1770,4 +1771,52 @@ input, select, textarea {
 	letter-spacing: 0.2rem;
 	font-size: 0.8rem;
   }
+  
+/* Adjust wrapper padding and flex properties for mobile */
+@media screen and (max-width: 736px) {
+    #wrapper {
+        min-height: 100vh;
+        padding: 2.5rem 1rem;
+        justify-content: center; /* Center content vertically */
+    }
+
+    #header {
+        margin-top: -2.5rem; /* Offset the wrapper padding */
+        padding-top: 0;
+    }
+
+    /* Adjust spacing between header elements */
+    #header > * {
+        margin-top: 2rem;
+    }
+
+    #header > :first-child {
+        margin-top: 0;
+    }
+
+    /* Ensure content stays centered */
+    #main {
+        margin: 0;
+        padding: 0;
+        flex: 0 1 auto; /* Don't allow main to grow/push footer down */
+    }
+
+    /* Adjust footer positioning */
+    #footer {
+        margin-top: 2rem;
+        position: relative;
+        bottom: 0;
+    }
+}
+
+/* Additional adjustments for very small screens */
+@media screen and (max-width: 480px) {
+    #wrapper {
+        padding: 1.5rem 1rem;
+    }
+
+    #header {
+        margin-top: -1.5rem;
+    }
+}
   
