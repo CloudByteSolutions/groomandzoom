@@ -42,19 +42,30 @@ body {
 		min-height: 100%;
 		overflow-y: auto;
 		-webkit-overflow-scrolling: touch;
-		padding: 1rem 1rem; /* Reduce padding */
-		justify-content: flex-start; /* Align content from top instead of space-between */
+		padding: 1rem 1rem;
+		justify-content: center;
+		display: flex;
+		align-items: center;
 	}
 
 	#header {
-		margin-top: 2rem; /* Add some space at the top */
+		margin-top: 0;
+		width: 100%;
+		max-width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
 	}
 
 	#main {
 		position: relative;
 		height: auto;
 		min-height: 100%;
-		margin-top: 2rem; /* Add space between header and main content */
+		margin-top: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 	}
 
 	#main article {
@@ -62,7 +73,7 @@ body {
 		overflow-y: auto;
 		-webkit-overflow-scrolling: touch;
 		position: relative;
-		margin: 2rem 0;
+		margin: 0;
 		transform: none !important;
 		transition: opacity 0.325s ease-in-out !important;
 	}
