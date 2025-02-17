@@ -26,8 +26,28 @@ footer, header, hgroup, menu, nav, section {
 
 body {
 	line-height: 1;
-	overflow: hidden;
+	overflow: hidden; /* Keep overflow hidden by default for desktop */
 	height: 100vh;
+}
+
+/* Add mobile-specific overrides */
+@media screen and (max-width: 736px) {
+	body {
+		overflow-y: auto;
+		-webkit-overflow-scrolling: touch;
+		height: 100%;
+	}
+
+	#wrapper {
+		min-height: 100%;
+		overflow-y: auto;
+	}
+
+	#main article {
+		max-height: 85vh;
+		overflow-y: auto;
+		-webkit-overflow-scrolling: touch;
+	}
 }
 
 ol, ul {
@@ -1256,10 +1276,11 @@ input, select, textarea {
 		-ms-justify-content: space-between;
 		justify-content: space-between;
 		position: relative;
-		min-height: 100vh;
+		min-height: 100%;
 		width: 100%;
 		padding: 4rem 2rem;
 		z-index: 3;
+		overflow-y: auto;
 	}
 
 		#wrapper:before {
@@ -1609,7 +1630,7 @@ input, select, textarea {
 			border-radius: 4px;
 			opacity: 0;
 			overflow-y: auto;
-			max-height: 90vh;
+			max-height: 85vh;
 			margin: 0;
 			-webkit-overflow-scrolling: touch;
 			
