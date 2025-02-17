@@ -1848,12 +1848,20 @@ input, select, textarea {
 /* Desktop-specific styles */
 @media screen and (min-width: 737px) {
     body.is-article-visible {
-        overflow-y: auto; /* Allow scrolling when article is visible on desktop */
+        overflow-y: auto;
     }
 
     #main article {
-        overflow-y: auto; /* Enable scrolling within articles on desktop */
+        overflow-y: auto;
         max-height: 85vh;
+        /* Hide scrollbar but maintain functionality */
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none; /* IE and Edge */
+    }
+
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    #main article::-webkit-scrollbar {
+        display: none;
     }
 }
   
