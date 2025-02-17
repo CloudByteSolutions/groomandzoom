@@ -35,7 +35,6 @@ html, body {
 
 body {
 	line-height: 1;
-	overflow: hidden; /* Keep overflow hidden by default for desktop */
 	height: 100vh;
 }
 
@@ -1843,6 +1842,18 @@ input, select, textarea {
     #footer {
         margin-top: 2rem;
         padding-bottom: 1rem;
+    }
+}
+  
+/* Desktop-specific styles */
+@media screen and (min-width: 737px) {
+    body.is-article-visible {
+        overflow-y: auto; /* Allow scrolling when article is visible on desktop */
+    }
+
+    #main article {
+        overflow-y: auto; /* Enable scrolling within articles on desktop */
+        max-height: 85vh;
     }
 }
   
