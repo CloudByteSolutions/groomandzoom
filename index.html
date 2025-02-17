@@ -1,16 +1,24 @@
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
-    <title>Groom and Zoom | Mobile Dog Grooming Chicago | At-Home Pet Grooming Service</title>
+    <title>Groom and Zoom | Mobile Dog Grooming Chicago | Professional Pet Grooming</title>
     <meta charset="utf-8" />
-    <meta name="description" content="Professional mobile dog grooming service in Chicago. We bring the salon to your doorstep! Convenient, stress-free grooming for your pets in the comfort of your home." />
-    <meta name="keywords" content="mobile dog grooming, Chicago dog groomer, pet grooming Chicago, at home dog grooming, mobile pet grooming, dog grooming service Chicago, professional dog groomer" />
+    <meta name="description" content="Book Chicago's trusted mobile dog grooming service. Groom and Zoom brings veterinarian-led, professional pet grooming to your doorstep. Stress-free grooming in the comfort of your home." />
+    <meta name="keywords" content="groom and zoom, mobile dog grooming, Chicago dog groomer, pet grooming Chicago, at home dog grooming, mobile pet grooming, dog grooming service Chicago, professional dog groomer" />
     
     <!-- Open Graph Tags -->
-    <meta property="og:title" content="Groom and Zoom - Mobile Dog Grooming Chicago" />
-    <meta property="og:description" content="Professional mobile dog grooming service in Chicago. We bring the salon to your doorstep!" />
-    <meta property="og:image" content="images/logo.svg" />
+    <meta property="og:title" content="Groom and Zoom - Chicago's Premier Mobile Dog Grooming" />
+    <meta property="og:description" content="Groom and Zoom brings professional mobile dog grooming to your doorstep in Chicago. Veterinarian-owned, stress-free pet grooming service." />
+    <meta property="og:image" content="https://groomandzoom.com/images/logo.svg" />
     <meta property="og:url" content="https://groomandzoom.com" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Groom and Zoom" />
+    
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Groom and Zoom - Mobile Dog Grooming Chicago" />
+    <meta name="twitter:description" content="Professional mobile dog grooming at your doorstep in Chicago. Veterinarian-owned and operated." />
+    <meta name="twitter:image" content="https://groomandzoom.com/images/logo.svg" />
     
     <!-- Existing meta tags -->
     <link rel="preload" href="assets/css/main.css" as="style" />
@@ -27,18 +35,41 @@
     {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
-      "name": "Groom and Zoom Mobile Dog Grooming",
-      "image": "images/logo.svg",
-      "description": "Professional mobile dog grooming service in Chicago. We bring the salon to your doorstep!",
+      "name": "Groom and Zoom",
+      "alternateName": "Groom and Zoom Mobile Dog Grooming",
+      "image": "https://groomandzoom.com/images/logo.svg",
+      "description": "Chicago's premier mobile dog grooming service. Veterinarian-owned and operated, bringing professional grooming to your doorstep.",
       "@id": "https://groomandzoom.com",
       "url": "https://groomandzoom.com",
       "telephone": "[Your Phone Number]",
       "priceRange": "$$",
+      "potentialAction": {
+        "@type": "ReserveAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://groomandzoom.com/#book",
+          "inLanguage": "en-US",
+          "actionPlatform": [
+            "http://schema.org/DesktopWebPlatform",
+            "http://schema.org/IOSPlatform",
+            "http://schema.org/AndroidPlatform"
+          ]
+        },
+        "result": {
+          "@type": "Reservation",
+          "name": "Book Dog Grooming Appointment"
+        }
+      },
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Chicago",
         "addressRegion": "IL",
         "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "41.8781",
+        "longitude": "-87.6298"
       },
       "areaServed": {
         "@type": "GeoCircle",
@@ -61,6 +92,32 @@
         ],
         "opens": "08:00",
         "closes": "18:00"
+      },
+      "sameAs": [
+        "https://www.facebook.com/groomandzoom",
+        "https://www.instagram.com/groomandzoom"
+      ],
+      "founder": {
+        "@type": "Person",
+        "name": "Hamza Ajeena",
+        "jobTitle": "Doctor of Veterinary Medicine"
+      }
+    }
+    </script>
+
+    <!-- Sitelinks Search Box -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "url": "https://groomandzoom.com/",
+      "potentialAction": {
+        "@type": "Action",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://groomandzoom.com/#book"
+        },
+        "name": "book now"
       }
     }
     </script>
