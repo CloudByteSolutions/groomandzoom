@@ -488,7 +488,7 @@
 			lastPhraseSpans.forEach((span, i) => {
 				setTimeout(() => {
 					span.classList.add('visible');
-				}, baseDelay + (i * 500));
+				}, baseDelay + (i * (i === lastPhraseSpans.length - 1 ? 200 : 500)));  // 200ms for WAY!, 500ms for others
 			});
 
 			// Fade in location text
