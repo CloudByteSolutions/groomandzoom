@@ -39,9 +39,8 @@ body {
 	}
 
 	#wrapper {
-		min-height: 100vh;
-		padding: 2.5rem 1rem;
-		justify-content: center; /* Center content vertically */
+		min-height: 100%;
+		overflow-y: auto;
 	}
 
 	#main article {
@@ -1300,7 +1299,7 @@ input, select, textarea {
 		@media screen and (max-width: 736px) {
 
 			#wrapper {
-				padding: 2.5rem 1rem;
+				padding: 2rem 1rem;
 			}
 
 		}
@@ -1308,7 +1307,7 @@ input, select, textarea {
 		@media screen and (max-width: 480px) {
 
 			#wrapper {
-				padding: 1.5rem 1rem;
+				padding: 1rem;
 			}
 
 		}
@@ -1660,21 +1659,43 @@ input, select, textarea {
 			}
 
 			#main article .close {
-				position: fixed;
-				top: 1rem;
-				right: 1rem;
-				width: 3rem;
-				height: 3rem;
-				z-index: 10;
-				background-color: rgba(27, 31, 34, 0.85);
-				border-radius: 50%;
+				display: block;
+				position: absolute;
+				top: 0;
+				right: 0;
+				width: 4rem;
+				height: 4rem;
+				cursor: pointer;
+				text-indent: 4rem;
+				overflow: hidden;
+				white-space: nowrap;
 			}
 
 				#main article .close:before {
-					top: 0.375rem;
-					left: 0.375rem;
-					width: 2.25rem;
-					height: 2.25rem;
+					-moz-transition: background-color 0.2s ease-in-out;
+					-webkit-transition: background-color 0.2s ease-in-out;
+					-ms-transition: background-color 0.2s ease-in-out;
+					transition: background-color 0.2s ease-in-out;
+					content: '';
+					display: block;
+					position: absolute;
+					top: 0.75rem;
+					left: 0.75rem;
+					width: 2.5rem;
+					height: 2.5rem;
+					border-radius: 100%;
+					background-position: center;
+					background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='20px' height='20px' viewBox='0 0 20 20' zoomAndPan='disable'%3E%3Cstyle%3Eline %7B stroke: %23ffffff%3B stroke-width: 1%3B %7D%3C/style%3E%3Cline x1='2' y1='2' x2='18' y2='18' /%3E%3Cline x1='18' y1='2' x2='2' y2='18' /%3E%3C/svg%3E");
+					background-size: 20px 20px;
+					background-repeat: no-repeat;
+				}
+
+				#main article .close:hover:before {
+					background-color: rgba(255, 255, 255, 0.075);
+				}
+
+				#main article .close:active:before {
+					background-color: rgba(255, 255, 255, 0.175);
 				}
 
 		@media screen and (max-width: 736px) {
@@ -1682,6 +1703,14 @@ input, select, textarea {
 			#main article {
 				padding: 3.5rem 2rem 0.5rem 2rem ;
 			}
+
+				#main article .close:before {
+					top: 0.875rem;
+					left: 0.875rem;
+					width: 2.25rem;
+					height: 2.25rem;
+					background-size: 14px 14px;
+				}
 
 		}
 
@@ -1741,52 +1770,4 @@ input, select, textarea {
 	letter-spacing: 0.2rem;
 	font-size: 0.8rem;
   }
-  
-/* Adjust wrapper padding and flex properties for mobile */
-@media screen and (max-width: 736px) {
-    #wrapper {
-        min-height: 100vh;
-        padding: 2.5rem 1rem;
-        justify-content: center; /* Center content vertically */
-    }
-
-    #header {
-        margin-top: -2.5rem; /* Offset the wrapper padding */
-        padding-top: 0;
-    }
-
-    /* Adjust spacing between header elements */
-    #header > * {
-        margin-top: 2rem;
-    }
-
-    #header > :first-child {
-        margin-top: 0;
-    }
-
-    /* Ensure content stays centered */
-    #main {
-        margin: 0;
-        padding: 0;
-        flex: 0 1 auto; /* Don't allow main to grow/push footer down */
-    }
-
-    /* Adjust footer positioning */
-    #footer {
-        margin-top: 2rem;
-        position: relative;
-        bottom: 0;
-    }
-}
-
-/* Additional adjustments for very small screens */
-@media screen and (max-width: 480px) {
-    #wrapper {
-        padding: 1.5rem 1rem;
-    }
-
-    #header {
-        margin-top: -1.5rem;
-    }
-}
   
