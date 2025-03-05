@@ -512,4 +512,20 @@
 		setTimeout(startAnimations, 500);
 	});
 
+	$(function(){
+		// If using an ID, use: $('#bookNowButton')
+		$('.button.primary').on('click', function(event) {
+		  event.preventDefault(); // Prevent the default link behavior
+		  
+		  // Replace the entire page with the iframe container
+		  $('body').html(
+			'<div style="width:100vw; height:100vh;">' +
+			  '<iframe src="https://booking.moego.pet/ol/GroomandZoom121847/landing?utm_medium=embed" ' +
+					  'style="width:100%; height:100%; border:0;" ' +
+					  'title="Online booking" scrolling="no"></iframe>' +
+			'</div>'
+		  );
+		});
+	  });
+	  
 })(jQuery);
