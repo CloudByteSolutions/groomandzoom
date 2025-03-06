@@ -521,7 +521,7 @@
 			// Once fade out completes, replace the HTML with the iframe container
 			$('body').html(
 			  '<div style="width:100vw; height:100vh;">' +
-				'<iframe src="https://booking.moego.pet/ol/GroomandZoom121847/landing?utm_medium=embed" ' +
+				'<iframe src="https://booking.moego.pet/ol/landing?name=GroomandZoom121847" ' +
 						'style="width:100%; height:100%; border:0;" ' +
 						'title="Online booking" scrolling="no"></iframe>' +
 			  '</div>'
