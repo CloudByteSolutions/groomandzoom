@@ -522,7 +522,7 @@
 			$('body').html(
 			  '<div style="width:100vw; height:100vh;">' +
 				'<iframe src="https://booking.moego.pet/ol/landing?name=GroomandZoom121847" ' +
-						'style="width:100%; height:100%; border:0;" ' +
+						'style="width:100%; height:90%; border:0;" ' +
 						'title="Online booking" scrolling="no"></iframe>' +
 			  '</div>'
 			).fadeIn(500); // Fade in the new content over 500ms
