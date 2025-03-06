@@ -515,22 +515,20 @@
 	$(function(){
 		$('.button.primary').on('click', function(event) {
 		  event.preventDefault(); // Prevent default navigation
-	  
+		  
 		  // Fade out the current page content over 500ms
 		  $('body').fadeOut(500, function(){
 			// Once fade out completes, replace the HTML with the iframe container
 			$('body').html(
-			  '<div style="width:100vw; height:100vh;">' +
+			  '<div style="width:100vw; height:800px;">' +
 				'<iframe src="https://booking.moego.pet/ol/GroomandZoom121847/book?utm_medium=embed" ' +
 						'style="width:100%; height:90%; border:0;" ' +
 						'title="Online booking" scrolling="yes"></iframe>' +
 			  '</div>'
-			).fadeIn(500, function(){
-			   // Trigger a slight scroll to prompt the URL bar to hide
-			   window.scrollTo(0, 1);
-			});
+			).fadeIn(500); // Fade in the new content over 500ms
 		  });
 		});
 	  });
+	
 
 })(jQuery);
